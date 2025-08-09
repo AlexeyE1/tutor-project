@@ -1,16 +1,21 @@
 from django.shortcuts import render
 from django.contrib import messages
+from django.views.generic import TemplateView
+from django.urls import reverse_lazy
+from django.shortcuts import redirect
 
 # Create your views here.
 
-def home_view(request):
-    """Главная страница сайта"""
-    context = {
-        'title': 'Главная - Наставник',
-        'page_title': 'Найдите лучшего наставника',
-        'page_description': 'Платформа для поиска квалифицированных наставников и репетиторов'
-    }
-    return render(request, 'main/home.html', context)
+class HomeView(TemplateView):
+    template_name = 'main/home.html'
+
+    
+    def post(request, *args, **kwargs):
+        role = request.POST.get('role')
+        if role in ['student', 'teacher']:
+            request.session['role'] = role
+            return redirect(reverse_lazy('accounts:registration'))
+
 
 # def about_view(request):
 #     """Страница о нас"""

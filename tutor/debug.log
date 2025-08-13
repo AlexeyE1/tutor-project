@@ -11366,3 +11366,255 @@ File C:\!repetitor\tutor\reviews\templates\reviews\delete_review.html first seen
 File C:\!repetitor\tutor\reviews\templates\reviews\edit_review.html first seen with mtime 1754610901.8842535
 File C:\!repetitor\tutor\accounts\templates\accounts first seen with mtime 1754758839.2030125
 File C:\!repetitor\tutor\templates\base.html first seen with mtime 1754606359.5469441
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\sessions\migrations\__init__.py first seen with mtime 1754694043.7116933
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\admin\migrations\0001_initial.py first seen with mtime 1754694042.4359055
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\contenttypes\migrations\__init__.py first seen with mtime 1754694042.9566305
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\auth\migrations\0003_alter_user_email_max_length.py first seen with mtime 1754694042.7696607
+File C:\!repetitor\venv\Lib\site-packages\django\db\migrations\recorder.py first seen with mtime 1754694043.9112296
+File C:\Users\Алексей\AppData\Local\Programs\Python\Python313\Lib\encodings\idna.py first seen with mtime 1728286008.0
+File C:\!repetitor\tutor\catalog\migrations\__init__.py first seen with mtime 1754603786.0718076
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\admin\migrations\__init__.py first seen with mtime 1754694042.4369864
+File C:\!repetitor\venv\Lib\site-packages\PIL\ImageMode.py first seen with mtime 1754694091.378114
+File C:\Users\Алексей\AppData\Local\Programs\Python\Python313\Lib\__future__.py first seen with mtime 1728286008.0
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\auth\migrations\0008_alter_user_username_max_length.py first seen with mtime 1754694042.7721722
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\admin\migrations\0003_logentry_add_action_flag_choices.py first seen with mtime 1754694042.4369864
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\auth\migrations\0007_alter_validators_add_error_messages.py first seen with mtime 1754694042.7721722
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\contenttypes\migrations\0001_initial.py first seen with mtime 1754694042.9556234
+File C:\!repetitor\venv\Lib\site-packages\PIL\_deprecate.py first seen with mtime 1754694091.439901
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\sessions\backends\db.py first seen with mtime 1754694043.588121
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\auth\migrations\0002_alter_permission_name_max_length.py first seen with mtime 1754694042.7696607
+File C:\!repetitor\venv\Lib\site-packages\django\db\migrations\autodetector.py first seen with mtime 1754694043.9081745
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\auth\migrations\0009_alter_user_last_name_max_length.py first seen with mtime 1754694042.7731726
+File C:\!repetitor\venv\Lib\site-packages\django\core\management\utils.py first seen with mtime 1754694043.8669977
+File C:\!repetitor\tutor\tutor\wsgi.py first seen with mtime 1754599992.3817947
+File C:\!repetitor\venv\Lib\site-packages\PIL\__init__.py first seen with mtime 1754694091.4045546
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\auth\migrations\0011_update_proxy_permissions.py first seen with mtime 1754694042.7731726
+File C:\!repetitor\venv\Lib\site-packages\django\db\migrations\questioner.py first seen with mtime 1754694043.9112296
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\admin\migrations\0002_logentry_remove_auto_add.py first seen with mtime 1754694042.4359055
+File C:\!repetitor\tutor\main\migrations\__init__.py first seen with mtime 1754604286.9555497
+File C:\!repetitor\venv\Lib\site-packages\django\core\management\sql.py first seen with mtime 1754694043.8659985
+File C:\!repetitor\venv\Lib\site-packages\PIL\_util.py first seen with mtime 1754694091.466531
+File C:\Users\Алексей\AppData\Local\Programs\Python\Python313\Lib\stringprep.py first seen with mtime 1728286008.0
+File C:\!repetitor\venv\Lib\site-packages\PIL\TiffTags.py first seen with mtime 1754694091.40104
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\auth\migrations\0006_require_contenttypes_0002.py first seen with mtime 1754694042.7711658
+File C:\!repetitor\venv\Lib\site-packages\django\core\management\commands\migrate.py first seen with mtime 1754694043.8724294
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\sessions\migrations\0001_initial.py first seen with mtime 1754694043.711188
+File C:\!repetitor\venv\Lib\site-packages\PIL\ExifTags.py first seen with mtime 1754694091.3627732
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\auth\migrations\0001_initial.py first seen with mtime 1754694042.7696607
+File C:\!repetitor\tutor\accounts\migrations\0001_initial.py first seen with mtime 1754762632.340383
+File C:\!repetitor\venv\Lib\site-packages\django\views\csrf.py first seen with mtime 1754694044.056726
+File C:\!repetitor\venv\Lib\site-packages\django\db\migrations\writer.py first seen with mtime 1754694043.9131193
+File C:\!repetitor\venv\Lib\site-packages\django\db\migrations\executor.py first seen with mtime 1754694043.9086795
+File C:\!repetitor\venv\Lib\site-packages\PIL\_typing.py first seen with mtime 1754694091.466531
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\contenttypes\migrations\0002_remove_content_type_name.py first seen with mtime 1754694042.9566305
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\auth\migrations\0005_alter_user_last_login_null.py first seen with mtime 1754694042.7711658
+File C:\!repetitor\tutor\accounts\migrations\__init__.py first seen with mtime 1754603732.7789445
+File C:\!repetitor\venv\Lib\site-packages\django\core\management\commands\makemigrations.py first seen with mtime 1754694043.8724294
+File C:\!repetitor\venv\Lib\site-packages\PIL\_version.py first seen with mtime 1754694091.466531
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\auth\migrations\0012_alter_user_first_name_max_length.py first seen with mtime 1754694042.7743862
+File C:\!repetitor\venv\Lib\site-packages\django\db\migrations\loader.py first seen with mtime 1754694043.910139
+File C:\!repetitor\venv\Lib\site-packages\django\middleware\clickjacking.py first seen with mtime 1754694043.9835699
+File C:\!repetitor\tutor\reviews\migrations\__init__.py first seen with mtime 1754603746.6115365
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\auth\migrations\__init__.py first seen with mtime 1754694042.7743862
+File C:\!repetitor\venv\Lib\site-packages\PIL\_imaging.cp313-win_amd64.pyd first seen with mtime 1754694091.4491892
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\auth\migrations\0010_alter_group_name_max_length.py first seen with mtime 1754694042.7731726
+File C:\!repetitor\venv\Lib\site-packages\django\db\migrations\optimizer.py first seen with mtime 1754694043.9112296
+File C:\!repetitor\venv\Lib\site-packages\django\core\cache\backends\locmem.py first seen with mtime 1754694043.8446567
+File C:\!repetitor\venv\Lib\site-packages\django\db\migrations\graph.py first seen with mtime 1754694043.9086795
+File C:\!repetitor\venv\Lib\site-packages\django\db\migrations\serializer.py first seen with mtime 1754694043.9126153
+File C:\!repetitor\venv\Lib\site-packages\PIL\Image.py first seen with mtime 1754694091.3702662
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\auth\migrations\0004_alter_user_username_opts.py first seen with mtime 1754694042.7711658
+File C:\!repetitor\venv\Lib\site-packages\PIL\_binary.py first seen with mtime 1754694091.4387681
+"GET / HTTP/1.1" 200 361
+"GET /static/css/style.css HTTP/1.1" 200 0
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\!repetitor\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\!repetitor\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+                                               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\!repetitor\venv\Lib\site-packages\django\core\handlers\base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\!repetitor\venv\Lib\site-packages\django\urls\resolvers.py", line 705, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'catalog.urls' from 'C:\\!repetitor\\tutor\\catalog\\urls.py'> (catalog:catalog) 'catalog/'>], [<URLResolver <module 'accounts.urls' from 'C:\\!repetitor\\tutor\\accounts\\urls.py'> (accounts:accounts) 'accounts/'>], [<URLResolver <module 'reviews.urls' from 'C:\\!repetitor\\tutor\\reviews\\urls.py'> (reviews:reviews) 'reviews/'>], [<URLResolver <module 'main.urls' from 'C:\\!repetitor\\tutor\\main\\urls.py'> (main:main) ''>, <URLPattern '' [name='home']>], [<URLPattern '^media/(?P<path>.*)$'>], [<URLPattern '^static/(?P<path>.*)$'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\!repetitor\venv\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\!repetitor\venv\Lib\site-packages\django\template\base.py", line 901, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\!repetitor\venv\Lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    current = current[int(bit)]
+                      ~~~^^^^^
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\!repetitor\venv\Lib\site-packages\django\template\base.py", line 914, in _resolve_lookup
+    raise VariableDoesNotExist(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )  # missing attribute
+    ^
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\!repetitor\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\!repetitor\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+                                               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\!repetitor\venv\Lib\site-packages\django\core\handlers\base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\!repetitor\venv\Lib\site-packages\django\urls\resolvers.py", line 705, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'catalog.urls' from 'C:\\!repetitor\\tutor\\catalog\\urls.py'> (catalog:catalog) 'catalog/'>], [<URLResolver <module 'accounts.urls' from 'C:\\!repetitor\\tutor\\accounts\\urls.py'> (accounts:accounts) 'accounts/'>], [<URLResolver <module 'reviews.urls' from 'C:\\!repetitor\\tutor\\reviews\\urls.py'> (reviews:reviews) 'reviews/'>], [<URLResolver <module 'main.urls' from 'C:\\!repetitor\\tutor\\main\\urls.py'> (main:main) ''>, <URLPattern '' [name='home']>], [<URLPattern '^media/(?P<path>.*)$'>], [<URLPattern '^static/(?P<path>.*)$'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\!repetitor\venv\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\!repetitor\venv\Lib\site-packages\django\template\base.py", line 901, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\!repetitor\venv\Lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    current = current[int(bit)]
+                      ~~~^^^^^
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\!repetitor\venv\Lib\site-packages\django\template\base.py", line 914, in _resolve_lookup
+    raise VariableDoesNotExist(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )  # missing attribute
+    ^
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'catalog.urls' from 'C:\\!repetitor\\tutor\\catalog\\urls.py'> (catalog:catalog) 'catalog/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\!repetitor\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\!repetitor\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+                                               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\!repetitor\venv\Lib\site-packages\django\core\handlers\base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\!repetitor\venv\Lib\site-packages\django\urls\resolvers.py", line 705, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'catalog.urls' from 'C:\\!repetitor\\tutor\\catalog\\urls.py'> (catalog:catalog) 'catalog/'>], [<URLResolver <module 'accounts.urls' from 'C:\\!repetitor\\tutor\\accounts\\urls.py'> (accounts:accounts) 'accounts/'>], [<URLResolver <module 'reviews.urls' from 'C:\\!repetitor\\tutor\\reviews\\urls.py'> (reviews:reviews) 'reviews/'>], [<URLResolver <module 'main.urls' from 'C:\\!repetitor\\tutor\\main\\urls.py'> (main:main) ''>, <URLPattern '' [name='home']>], [<URLPattern '^media/(?P<path>.*)$'>], [<URLPattern '^static/(?P<path>.*)$'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\!repetitor\venv\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\!repetitor\venv\Lib\site-packages\django\template\base.py", line 901, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\!repetitor\venv\Lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    current = current[int(bit)]
+                      ~~~^^^^^
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\!repetitor\venv\Lib\site-packages\django\template\base.py", line 914, in _resolve_lookup
+    raise VariableDoesNotExist(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )  # missing attribute
+    ^
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'accounts.urls' from 'C:\\!repetitor\\tutor\\accounts\\urls.py'> (accounts:accounts) 'accounts/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\!repetitor\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\!repetitor\venv\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+                                               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\!repetitor\venv\Lib\site-packages\django\core\handlers\base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\!repetitor\venv\Lib\site-packages\django\urls\resolvers.py", line 705, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'catalog.urls' from 'C:\\!repetitor\\tutor\\catalog\\urls.py'> (catalog:catalog) 'catalog/'>], [<URLResolver <module 'accounts.urls' from 'C:\\!repetitor\\tutor\\accounts\\urls.py'> (accounts:accounts) 'accounts/'>], [<URLResolver <module 'reviews.urls' from 'C:\\!repetitor\\tutor\\reviews\\urls.py'> (reviews:reviews) 'reviews/'>], [<URLResolver <module 'main.urls' from 'C:\\!repetitor\\tutor\\main\\urls.py'> (main:main) ''>, <URLPattern '' [name='home']>], [<URLPattern '^media/(?P<path>.*)$'>], [<URLPattern '^static/(?P<path>.*)$'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\!repetitor\venv\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\!repetitor\venv\Lib\site-packages\django\template\base.py", line 901, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\!repetitor\venv\Lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    current = current[int(bit)]
+                      ~~~^^^^^
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\!repetitor\venv\Lib\site-packages\django\template\base.py", line 914, in _resolve_lookup
+    raise VariableDoesNotExist(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )  # missing attribute
+    ^
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'reviews.urls' from 'C:\\!repetitor\\tutor\\reviews\\urls.py'> (reviews:reviews) 'reviews/'>
+Not Found: /favicon.ico
+- Broken pipe from ('127.0.0.1', 49998)
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\messages\storage\cookie.py first seen with mtime 1754694043.3702612
+File C:\Users\Алексей\AppData\Local\Programs\Python\Python313\Lib\encodings\unicode_escape.py first seen with mtime 1728286008.0
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\staticfiles\storage.py first seen with mtime 1754694043.8337636
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\messages\storage\session.py first seen with mtime 1754694043.371766
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\auth\context_processors.py first seen with mtime 1754694042.6310985
+File C:\!repetitor\venv\Lib\site-packages\django\template\context_processors.py first seen with mtime 1754694043.9875863
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\sessions\serializers.py first seen with mtime 1754694043.5857277
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\messages\context_processors.py first seen with mtime 1754694043.367264
+File C:\!repetitor\venv\Lib\site-packages\django\contrib\messages\storage\fallback.py first seen with mtime 1754694043.3712614

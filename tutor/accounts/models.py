@@ -48,6 +48,8 @@ class MentorProfile(models.Model):
     learning_types = models.ManyToManyField(LearningTypeTag, blank=True)
     bio = models.TextField(blank=True)
     available_days = models.JSONField(blank=True, null=True)
+    price = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
+    experience_years = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return f"MentorProfile({self.user.username})"

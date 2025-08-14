@@ -1,5 +1,5 @@
 from django.urls import path
-from . import HomeView
+from .views import HomeView
 
 app_name = 'catalog'
 

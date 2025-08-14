@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, UserChangeForm, PasswordChangeForm
 from django.contrib.auth import get_user_model
-from .models import CustomUser, MentorProfile
+from .models import CustomUser, TeacherProfile
 
 
 class UserLoginForm(AuthenticationForm):
@@ -51,12 +51,12 @@ class StudentRegistrationForm(BaseRegistrationForm):
 
 class TeacherRegistrationForm(BaseRegistrationForm):
     subjects = forms.ModelMultipleChoiceField(
-        queryset=MentorProfile._meta.get_field('subjects').related_model.objects.all(),
+        queryset=TeacherProfile._meta.get_field('subjects').related_model.objects.all(),
         widget=forms.CheckboxSelectMultiple,
         required=False
     )
     learning_types = forms.ModelMultipleChoiceField(
-        queryset=MentorProfile._meta.get_field('learning_types').related_model.objects.all(),
+        queryset=TeacherProfile._meta.get_field('learning_types').related_model.objects.all(),
         widget=forms.CheckboxSelectMultiple,
         required=False
     )
@@ -67,7 +67,7 @@ class TeacherRegistrationForm(BaseRegistrationForm):
         user.role = 'teacher'
         if commit:
             user.save()
-            mentor_profile = MentorProfile.objects.create(
+            mentor_profile = TeacherProfile.objects.create(
                 user=user,
                 bio=self.cleaned_data.get('bio', '')
             )

@@ -11618,3 +11618,346 @@ File C:\!repetitor\venv\Lib\site-packages\django\template\context_processors.py 
 File C:\!repetitor\venv\Lib\site-packages\django\contrib\sessions\serializers.py first seen with mtime 1754694043.5857277
 File C:\!repetitor\venv\Lib\site-packages\django\contrib\messages\context_processors.py first seen with mtime 1754694043.367264
 File C:\!repetitor\venv\Lib\site-packages\django\contrib\messages\storage\fallback.py first seen with mtime 1754694043.3712614
+(0.027) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+(0.002) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.004) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.001) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.001) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.009) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" IN ('logentry')); args=('admin', 'logentry'); alias=default
+(0.006) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(1,); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" IN ('group', 'permission')); args=('auth', 'group', 'permission'); alias=default
+(0.001) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(2, 3); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" IN ('contenttype')); args=('contenttypes', 'contenttype'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(4,); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" IN ('session')); args=('sessions', 'session'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(5,); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'accounts'; args=('accounts',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'accounts' AND "django_content_type"."model" IN ('customuser', 'learningtypetag', 'subjecttag', 'mentorprofile')); args=('accounts', 'customuser', 'learningtypetag', 'subjecttag', 'mentorprofile'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8, 9, 6, 7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(8, 9, 6, 7); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'accounts'; args=('accounts',); alias=default
+(0.004) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.005) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+(0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.001) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.001) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+(0.000) BEGIN; args=None; alias=default
+CREATE TABLE "accounts_certificate" ("id" bigint NOT NULL PRIMARY KEY GENERATED BY DEFAULT AS IDENTITY, "name" varchar(200) NOT NULL, "date_received" date NOT NULL, "document" varchar(100) NOT NULL); (params None)
+(0.030) CREATE TABLE "accounts_certificate" ("id" bigint NOT NULL PRIMARY KEY GENERATED BY DEFAULT AS IDENTITY, "name" varchar(200) NOT NULL, "date_received" date NOT NULL, "document" varchar(100) NOT NULL); args=None; alias=default
+CREATE TABLE "accounts_timeslot" ("id" bigint NOT NULL PRIMARY KEY GENERATED BY DEFAULT AS IDENTITY, "day_of_week" integer NOT NULL, "start_time" time NOT NULL, "end_time" time NOT NULL); (params None)
+(0.002) CREATE TABLE "accounts_timeslot" ("id" bigint NOT NULL PRIMARY KEY GENERATED BY DEFAULT AS IDENTITY, "day_of_week" integer NOT NULL, "start_time" time NOT NULL, "end_time" time NOT NULL); args=None; alias=default
+ALTER TABLE "accounts_customuser" DROP COLUMN "age" CASCADE; (params None)
+(0.008) ALTER TABLE "accounts_customuser" DROP COLUMN "age" CASCADE; args=None; alias=default
+ALTER TABLE "accounts_customuser" ADD COLUMN "bio" text DEFAULT '' NOT NULL; (params None)
+(0.004) ALTER TABLE "accounts_customuser" ADD COLUMN "bio" text DEFAULT '' NOT NULL; args=None; alias=default
+ALTER TABLE "accounts_customuser" ALTER COLUMN "bio" DROP DEFAULT; (params None)
+(0.000) ALTER TABLE "accounts_customuser" ALTER COLUMN "bio" DROP DEFAULT; args=None; alias=default
+ALTER TABLE "accounts_customuser" ADD COLUMN "email_confirmed" boolean DEFAULT false NOT NULL; (params None)
+(0.000) ALTER TABLE "accounts_customuser" ADD COLUMN "email_confirmed" boolean DEFAULT false NOT NULL; args=None; alias=default
+ALTER TABLE "accounts_customuser" ALTER COLUMN "email_confirmed" DROP DEFAULT; (params None)
+(0.000) ALTER TABLE "accounts_customuser" ALTER COLUMN "email_confirmed" DROP DEFAULT; args=None; alias=default
+ALTER TABLE "accounts_customuser" ADD COLUMN "is_verified" boolean DEFAULT false NOT NULL; (params None)
+(0.000) ALTER TABLE "accounts_customuser" ADD COLUMN "is_verified" boolean DEFAULT false NOT NULL; args=None; alias=default
+ALTER TABLE "accounts_customuser" ALTER COLUMN "is_verified" DROP DEFAULT; (params None)
+(0.000) ALTER TABLE "accounts_customuser" ALTER COLUMN "is_verified" DROP DEFAULT; args=None; alias=default
+ALTER TABLE "accounts_customuser" ADD COLUMN "phone" varchar(15) DEFAULT '' NOT NULL; (params None)
+(0.000) ALTER TABLE "accounts_customuser" ADD COLUMN "phone" varchar(15) DEFAULT '' NOT NULL; args=None; alias=default
+ALTER TABLE "accounts_customuser" ALTER COLUMN "phone" DROP DEFAULT; (params None)
+(0.000) ALTER TABLE "accounts_customuser" ALTER COLUMN "phone" DROP DEFAULT; args=None; alias=default
+ALTER TABLE "accounts_customuser" ADD COLUMN "verification_token" varchar(100) DEFAULT '' NOT NULL; (params None)
+(0.000) ALTER TABLE "accounts_customuser" ADD COLUMN "verification_token" varchar(100) DEFAULT '' NOT NULL; args=None; alias=default
+ALTER TABLE "accounts_customuser" ALTER COLUMN "verification_token" DROP DEFAULT; (params None)
+(0.000) ALTER TABLE "accounts_customuser" ALTER COLUMN "verification_token" DROP DEFAULT; args=None; alias=default
+ALTER TABLE "accounts_customuser" ALTER COLUMN "avatar" SET DEFAULT '1'; (params None)
+(0.000) ALTER TABLE "accounts_customuser" ALTER COLUMN "avatar" SET DEFAULT '1'; args=None; alias=default
+UPDATE "accounts_customuser" SET "avatar" = '1' WHERE "avatar" IS NULL; SET CONSTRAINTS ALL IMMEDIATE; (params None)
+(0.007) UPDATE "accounts_customuser" SET "avatar" = '1' WHERE "avatar" IS NULL; SET CONSTRAINTS ALL IMMEDIATE; args=None; alias=default
+ALTER TABLE "accounts_customuser" ALTER COLUMN "avatar" SET NOT NULL; (params None)
+(0.000) ALTER TABLE "accounts_customuser" ALTER COLUMN "avatar" SET NOT NULL; args=None; alias=default
+ALTER TABLE "accounts_customuser" ALTER COLUMN "avatar" DROP DEFAULT; (params None)
+(0.000) ALTER TABLE "accounts_customuser" ALTER COLUMN "avatar" DROP DEFAULT; args=None; alias=default
+(0.007) 
+            SELECT
+                c.conname,
+                array(
+                    SELECT attname
+                    FROM unnest(c.conkey) WITH ORDINALITY cols(colid, arridx)
+                    JOIN pg_attribute AS ca ON cols.colid = ca.attnum
+                    WHERE ca.attrelid = c.conrelid
+                    ORDER BY cols.arridx
+                ),
+                c.contype,
+                (SELECT fkc.relname || '.' || fka.attname
+                FROM pg_attribute AS fka
+                JOIN pg_class AS fkc ON fka.attrelid = fkc.oid
+                WHERE fka.attrelid = c.confrelid AND fka.attnum = c.confkey[1]),
+                cl.reloptions
+            FROM pg_constraint AS c
+            JOIN pg_class AS cl ON c.conrelid = cl.oid
+            WHERE cl.relname = 'accounts_customuser' AND pg_catalog.pg_table_is_visible(cl.oid)
+        ; args=['accounts_customuser']; alias=default
+(0.009) 
+            SELECT
+                indexname,
+                array_agg(attname ORDER BY arridx),
+                indisunique,
+                indisprimary,
+                array_agg(ordering ORDER BY arridx),
+                amname,
+                exprdef,
+                s2.attoptions
+            FROM (
+                SELECT
+                    c2.relname as indexname, idx.*, attr.attname, am.amname,
+                    CASE
+                        WHEN idx.indexprs IS NOT NULL THEN
+                            pg_get_indexdef(idx.indexrelid)
+                    END AS exprdef,
+                    CASE am.amname
+                        WHEN 'btree' THEN
+                            CASE (option & 1)
+                                WHEN 1 THEN 'DESC' ELSE 'ASC'
+                            END
+                    END as ordering,
+                    c2.reloptions as attoptions
+                FROM (
+                    SELECT *
+                    FROM
+                        pg_index i,
+                        unnest(i.indkey, i.indoption)
+                            WITH ORDINALITY koi(key, option, arridx)
+                ) idx
+                LEFT JOIN pg_class c ON idx.indrelid = c.oid
+                LEFT JOIN pg_class c2 ON idx.indexrelid = c2.oid
+                LEFT JOIN pg_am am ON c2.relam = am.oid
+                LEFT JOIN
+                    pg_attribute attr ON attr.attrelid = c.oid AND attr.attnum = idx.key
+                WHERE c.relname = 'accounts_customuser' AND pg_catalog.pg_table_is_visible(c.oid)
+            ) s2
+            GROUP BY indexname, indisunique, indisprimary, amname, exprdef, attoptions;
+        ; args=['btree', 'accounts_customuser']; alias=default
+ALTER TABLE "accounts_customuser" DROP CONSTRAINT "accounts_customuser_email_key"; (params None)
+(0.001) ALTER TABLE "accounts_customuser" DROP CONSTRAINT "accounts_customuser_email_key"; args=None; alias=default
+DROP INDEX IF EXISTS "accounts_customuser_email_4fd8e7ce_like"; (params None)
+(0.001) DROP INDEX IF EXISTS "accounts_customuser_email_4fd8e7ce_like"; args=None; alias=default
+ALTER TABLE "accounts_customuser" ALTER COLUMN "role" TYPE varchar(10); (params None)
+(0.005) ALTER TABLE "accounts_customuser" ALTER COLUMN "role" TYPE varchar(10); args=None; alias=default
+ALTER TABLE "accounts_learningtypetag" ALTER COLUMN "name" TYPE varchar(50); (params None)
+(0.002) ALTER TABLE "accounts_learningtypetag" ALTER COLUMN "name" TYPE varchar(50); args=None; alias=default
+ALTER TABLE "accounts_subjecttag" ALTER COLUMN "name" TYPE varchar(50); (params None)
+(0.002) ALTER TABLE "accounts_subjecttag" ALTER COLUMN "name" TYPE varchar(50); args=None; alias=default
+CREATE TABLE "accounts_studentprofile" ("id" bigint NOT NULL PRIMARY KEY GENERATED BY DEFAULT AS IDENTITY, "education_level" varchar(50) NOT NULL, "interests" text NOT NULL, "learning_goals" text NOT NULL, "user_id" bigint NOT NULL UNIQUE); (params None)
+(0.004) CREATE TABLE "accounts_studentprofile" ("id" bigint NOT NULL PRIMARY KEY GENERATED BY DEFAULT AS IDENTITY, "education_level" varchar(50) NOT NULL, "interests" text NOT NULL, "learning_goals" text NOT NULL, "user_id" bigint NOT NULL UNIQUE); args=None; alias=default
+CREATE TABLE "accounts_teacherprofile" ("id" bigint NOT NULL PRIMARY KEY GENERATED BY DEFAULT AS IDENTITY, "avg_rating" numeric(3, 2) NOT NULL, "experience_years" integer NOT NULL CHECK ("experience_years" >= 0), "verification_documents" varchar(100) NOT NULL, "user_id" bigint NOT NULL UNIQUE); (params None)
+(0.003) CREATE TABLE "accounts_teacherprofile" ("id" bigint NOT NULL PRIMARY KEY GENERATED BY DEFAULT AS IDENTITY, "avg_rating" numeric(3, 2) NOT NULL, "experience_years" integer NOT NULL CHECK ("experience_years" >= 0), "verification_documents" varchar(100) NOT NULL, "user_id" bigint NOT NULL UNIQUE); args=None; alias=default
+CREATE TABLE "accounts_teacherprofile_certificates" ("id" bigint NOT NULL PRIMARY KEY GENERATED BY DEFAULT AS IDENTITY, "teacherprofile_id" bigint NOT NULL, "certificate_id" bigint NOT NULL); (params None)
+(0.001) CREATE TABLE "accounts_teacherprofile_certificates" ("id" bigint NOT NULL PRIMARY KEY GENERATED BY DEFAULT AS IDENTITY, "teacherprofile_id" bigint NOT NULL, "certificate_id" bigint NOT NULL); args=None; alias=default
+CREATE TABLE "accounts_teacherprofile_learning_types" ("id" bigint NOT NULL PRIMARY KEY GENERATED BY DEFAULT AS IDENTITY, "teacherprofile_id" bigint NOT NULL, "learningtypetag_id" bigint NOT NULL); (params None)
+(0.002) CREATE TABLE "accounts_teacherprofile_learning_types" ("id" bigint NOT NULL PRIMARY KEY GENERATED BY DEFAULT AS IDENTITY, "teacherprofile_id" bigint NOT NULL, "learningtypetag_id" bigint NOT NULL); args=None; alias=default
+CREATE TABLE "accounts_teacherprofile_subjects" ("id" bigint NOT NULL PRIMARY KEY GENERATED BY DEFAULT AS IDENTITY, "teacherprofile_id" bigint NOT NULL, "subjecttag_id" bigint NOT NULL); (params None)
+(0.003) CREATE TABLE "accounts_teacherprofile_subjects" ("id" bigint NOT NULL PRIMARY KEY GENERATED BY DEFAULT AS IDENTITY, "teacherprofile_id" bigint NOT NULL, "subjecttag_id" bigint NOT NULL); args=None; alias=default
+CREATE TABLE "accounts_teacherprofile_available_times" ("id" bigint NOT NULL PRIMARY KEY GENERATED BY DEFAULT AS IDENTITY, "teacherprofile_id" bigint NOT NULL, "timeslot_id" bigint NOT NULL); (params None)
+(0.002) CREATE TABLE "accounts_teacherprofile_available_times" ("id" bigint NOT NULL PRIMARY KEY GENERATED BY DEFAULT AS IDENTITY, "teacherprofile_id" bigint NOT NULL, "timeslot_id" bigint NOT NULL); args=None; alias=default
+DROP TABLE "accounts_mentorprofile_learning_types" CASCADE; (params None)
+(0.002) DROP TABLE "accounts_mentorprofile_learning_types" CASCADE; args=None; alias=default
+DROP TABLE "accounts_mentorprofile_subjects" CASCADE; (params None)
+(0.001) DROP TABLE "accounts_mentorprofile_subjects" CASCADE; args=None; alias=default
+DROP TABLE "accounts_mentorprofile" CASCADE; (params None)
+(0.001) DROP TABLE "accounts_mentorprofile" CASCADE; args=None; alias=default
+ALTER TABLE "accounts_studentprofile" ADD CONSTRAINT "accounts_studentprof_user_id_04a48d2e_fk_accounts_" FOREIGN KEY ("user_id") REFERENCES "accounts_customuser" ("id") DEFERRABLE INITIALLY DEFERRED; (params None)
+(0.008) ALTER TABLE "accounts_studentprofile" ADD CONSTRAINT "accounts_studentprof_user_id_04a48d2e_fk_accounts_" FOREIGN KEY ("user_id") REFERENCES "accounts_customuser" ("id") DEFERRABLE INITIALLY DEFERRED; args=None; alias=default
+ALTER TABLE "accounts_teacherprofile" ADD CONSTRAINT "accounts_teacherprof_user_id_9582b3e8_fk_accounts_" FOREIGN KEY ("user_id") REFERENCES "accounts_customuser" ("id") DEFERRABLE INITIALLY DEFERRED; (params None)
+(0.003) ALTER TABLE "accounts_teacherprofile" ADD CONSTRAINT "accounts_teacherprof_user_id_9582b3e8_fk_accounts_" FOREIGN KEY ("user_id") REFERENCES "accounts_customuser" ("id") DEFERRABLE INITIALLY DEFERRED; args=None; alias=default
+ALTER TABLE "accounts_teacherprofile_certificates" ADD CONSTRAINT "accounts_teacherprofile__teacherprofile_id_certif_93e969fe_uniq" UNIQUE ("teacherprofile_id", "certificate_id"); (params None)
+(0.001) ALTER TABLE "accounts_teacherprofile_certificates" ADD CONSTRAINT "accounts_teacherprofile__teacherprofile_id_certif_93e969fe_uniq" UNIQUE ("teacherprofile_id", "certificate_id"); args=None; alias=default
+ALTER TABLE "accounts_teacherprofile_certificates" ADD CONSTRAINT "accounts_teacherprof_teacherprofile_id_4fe5ec70_fk_accounts_" FOREIGN KEY ("teacherprofile_id") REFERENCES "accounts_teacherprofile" ("id") DEFERRABLE INITIALLY DEFERRED; (params None)
+(0.001) ALTER TABLE "accounts_teacherprofile_certificates" ADD CONSTRAINT "accounts_teacherprof_teacherprofile_id_4fe5ec70_fk_accounts_" FOREIGN KEY ("teacherprofile_id") REFERENCES "accounts_teacherprofile" ("id") DEFERRABLE INITIALLY DEFERRED; args=None; alias=default
+ALTER TABLE "accounts_teacherprofile_certificates" ADD CONSTRAINT "accounts_teacherprof_certificate_id_e84fdb31_fk_accounts_" FOREIGN KEY ("certificate_id") REFERENCES "accounts_certificate" ("id") DEFERRABLE INITIALLY DEFERRED; (params None)
+(0.001) ALTER TABLE "accounts_teacherprofile_certificates" ADD CONSTRAINT "accounts_teacherprof_certificate_id_e84fdb31_fk_accounts_" FOREIGN KEY ("certificate_id") REFERENCES "accounts_certificate" ("id") DEFERRABLE INITIALLY DEFERRED; args=None; alias=default
+CREATE INDEX "accounts_teacherprofile_certificates_teacherprofile_id_4fe5ec70" ON "accounts_teacherprofile_certificates" ("teacherprofile_id"); (params None)
+(0.001) CREATE INDEX "accounts_teacherprofile_certificates_teacherprofile_id_4fe5ec70" ON "accounts_teacherprofile_certificates" ("teacherprofile_id"); args=None; alias=default
+CREATE INDEX "accounts_teacherprofile_certificates_certificate_id_e84fdb31" ON "accounts_teacherprofile_certificates" ("certificate_id"); (params None)
+(0.001) CREATE INDEX "accounts_teacherprofile_certificates_certificate_id_e84fdb31" ON "accounts_teacherprofile_certificates" ("certificate_id"); args=None; alias=default
+ALTER TABLE "accounts_teacherprofile_learning_types" ADD CONSTRAINT "accounts_teacherprofile__teacherprofile_id_learni_35ef91ae_uniq" UNIQUE ("teacherprofile_id", "learningtypetag_id"); (params None)
+(0.001) ALTER TABLE "accounts_teacherprofile_learning_types" ADD CONSTRAINT "accounts_teacherprofile__teacherprofile_id_learni_35ef91ae_uniq" UNIQUE ("teacherprofile_id", "learningtypetag_id"); args=None; alias=default
+ALTER TABLE "accounts_teacherprofile_learning_types" ADD CONSTRAINT "accounts_teacherprof_teacherprofile_id_4b01ea27_fk_accounts_" FOREIGN KEY ("teacherprofile_id") REFERENCES "accounts_teacherprofile" ("id") DEFERRABLE INITIALLY DEFERRED; (params None)
+(0.001) ALTER TABLE "accounts_teacherprofile_learning_types" ADD CONSTRAINT "accounts_teacherprof_teacherprofile_id_4b01ea27_fk_accounts_" FOREIGN KEY ("teacherprofile_id") REFERENCES "accounts_teacherprofile" ("id") DEFERRABLE INITIALLY DEFERRED; args=None; alias=default
+ALTER TABLE "accounts_teacherprofile_learning_types" ADD CONSTRAINT "accounts_teacherprof_learningtypetag_id_e8e0e18c_fk_accounts_" FOREIGN KEY ("learningtypetag_id") REFERENCES "accounts_learningtypetag" ("id") DEFERRABLE INITIALLY DEFERRED; (params None)
+(0.001) ALTER TABLE "accounts_teacherprofile_learning_types" ADD CONSTRAINT "accounts_teacherprof_learningtypetag_id_e8e0e18c_fk_accounts_" FOREIGN KEY ("learningtypetag_id") REFERENCES "accounts_learningtypetag" ("id") DEFERRABLE INITIALLY DEFERRED; args=None; alias=default
+CREATE INDEX "accounts_teacherprofile_le_teacherprofile_id_4b01ea27" ON "accounts_teacherprofile_learning_types" ("teacherprofile_id"); (params None)
+(0.002) CREATE INDEX "accounts_teacherprofile_le_teacherprofile_id_4b01ea27" ON "accounts_teacherprofile_learning_types" ("teacherprofile_id"); args=None; alias=default
+CREATE INDEX "accounts_teacherprofile_le_learningtypetag_id_e8e0e18c" ON "accounts_teacherprofile_learning_types" ("learningtypetag_id"); (params None)
+(0.001) CREATE INDEX "accounts_teacherprofile_le_learningtypetag_id_e8e0e18c" ON "accounts_teacherprofile_learning_types" ("learningtypetag_id"); args=None; alias=default
+ALTER TABLE "accounts_teacherprofile_subjects" ADD CONSTRAINT "accounts_teacherprofile__teacherprofile_id_subjec_31636caf_uniq" UNIQUE ("teacherprofile_id", "subjecttag_id"); (params None)
+(0.001) ALTER TABLE "accounts_teacherprofile_subjects" ADD CONSTRAINT "accounts_teacherprofile__teacherprofile_id_subjec_31636caf_uniq" UNIQUE ("teacherprofile_id", "subjecttag_id"); args=None; alias=default
+ALTER TABLE "accounts_teacherprofile_subjects" ADD CONSTRAINT "accounts_teacherprof_teacherprofile_id_49a3e620_fk_accounts_" FOREIGN KEY ("teacherprofile_id") REFERENCES "accounts_teacherprofile" ("id") DEFERRABLE INITIALLY DEFERRED; (params None)
+(0.002) ALTER TABLE "accounts_teacherprofile_subjects" ADD CONSTRAINT "accounts_teacherprof_teacherprofile_id_49a3e620_fk_accounts_" FOREIGN KEY ("teacherprofile_id") REFERENCES "accounts_teacherprofile" ("id") DEFERRABLE INITIALLY DEFERRED; args=None; alias=default
+ALTER TABLE "accounts_teacherprofile_subjects" ADD CONSTRAINT "accounts_teacherprof_subjecttag_id_83b29133_fk_accounts_" FOREIGN KEY ("subjecttag_id") REFERENCES "accounts_subjecttag" ("id") DEFERRABLE INITIALLY DEFERRED; (params None)
+(0.001) ALTER TABLE "accounts_teacherprofile_subjects" ADD CONSTRAINT "accounts_teacherprof_subjecttag_id_83b29133_fk_accounts_" FOREIGN KEY ("subjecttag_id") REFERENCES "accounts_subjecttag" ("id") DEFERRABLE INITIALLY DEFERRED; args=None; alias=default
+CREATE INDEX "accounts_teacherprofile_subjects_teacherprofile_id_49a3e620" ON "accounts_teacherprofile_subjects" ("teacherprofile_id"); (params None)
+(0.001) CREATE INDEX "accounts_teacherprofile_subjects_teacherprofile_id_49a3e620" ON "accounts_teacherprofile_subjects" ("teacherprofile_id"); args=None; alias=default
+CREATE INDEX "accounts_teacherprofile_subjects_subjecttag_id_83b29133" ON "accounts_teacherprofile_subjects" ("subjecttag_id"); (params None)
+(0.001) CREATE INDEX "accounts_teacherprofile_subjects_subjecttag_id_83b29133" ON "accounts_teacherprofile_subjects" ("subjecttag_id"); args=None; alias=default
+ALTER TABLE "accounts_teacherprofile_available_times" ADD CONSTRAINT "accounts_teacherprofile__teacherprofile_id_timesl_021b7080_uniq" UNIQUE ("teacherprofile_id", "timeslot_id"); (params None)
+(0.001) ALTER TABLE "accounts_teacherprofile_available_times" ADD CONSTRAINT "accounts_teacherprofile__teacherprofile_id_timesl_021b7080_uniq" UNIQUE ("teacherprofile_id", "timeslot_id"); args=None; alias=default
+ALTER TABLE "accounts_teacherprofile_available_times" ADD CONSTRAINT "accounts_teacherprof_teacherprofile_id_1abcfa54_fk_accounts_" FOREIGN KEY ("teacherprofile_id") REFERENCES "accounts_teacherprofile" ("id") DEFERRABLE INITIALLY DEFERRED; (params None)
+(0.001) ALTER TABLE "accounts_teacherprofile_available_times" ADD CONSTRAINT "accounts_teacherprof_teacherprofile_id_1abcfa54_fk_accounts_" FOREIGN KEY ("teacherprofile_id") REFERENCES "accounts_teacherprofile" ("id") DEFERRABLE INITIALLY DEFERRED; args=None; alias=default
+ALTER TABLE "accounts_teacherprofile_available_times" ADD CONSTRAINT "accounts_teacherprof_timeslot_id_bb886973_fk_accounts_" FOREIGN KEY ("timeslot_id") REFERENCES "accounts_timeslot" ("id") DEFERRABLE INITIALLY DEFERRED; (params None)
+(0.001) ALTER TABLE "accounts_teacherprofile_available_times" ADD CONSTRAINT "accounts_teacherprof_timeslot_id_bb886973_fk_accounts_" FOREIGN KEY ("timeslot_id") REFERENCES "accounts_timeslot" ("id") DEFERRABLE INITIALLY DEFERRED; args=None; alias=default
+CREATE INDEX "accounts_teacherprofile_av_teacherprofile_id_1abcfa54" ON "accounts_teacherprofile_available_times" ("teacherprofile_id"); (params None)
+(0.001) CREATE INDEX "accounts_teacherprofile_av_teacherprofile_id_1abcfa54" ON "accounts_teacherprofile_available_times" ("teacherprofile_id"); args=None; alias=default
+CREATE INDEX "accounts_teacherprofile_available_times_timeslot_id_bb886973" ON "accounts_teacherprofile_available_times" ("timeslot_id"); (params None)
+(0.001) CREATE INDEX "accounts_teacherprofile_available_times_timeslot_id_bb886973" ON "accounts_teacherprofile_available_times" ("timeslot_id"); args=None; alias=default
+(0.017) COMMIT; args=None; alias=default
+(0.003) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('accounts', '0002_certificate_timeslot_remove_customuser_age_and_more', '2025-08-14T21:10:37.989755+00:00'::timestamptz) RETURNING "django_migrations"."id"; args=('accounts', '0002_certificate_timeslot_remove_customuser_age_and_more', datetime.datetime(2025, 8, 14, 21, 10, 37, 989755, tzinfo=datetime.timezone.utc)); alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" IN ('logentry')); args=('admin', 'logentry'); alias=default
+(0.002) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(1,); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" IN ('group', 'permission')); args=('auth', 'group', 'permission'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(2, 3); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" IN ('contenttype')); args=('contenttypes', 'contenttype'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(4,); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" IN ('session')); args=('sessions', 'session'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(5,); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'accounts'; args=('accounts',); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.002) INSERT INTO "django_content_type" ("app_label", "model") SELECT * FROM UNNEST((ARRAY['accounts','accounts','accounts','accounts'])::varchar(100)[], (ARRAY['certificate','timeslot','studentprofile','teacherprofile'])::varchar(100)[]) RETURNING "django_content_type"."id"; args=(['accounts', 'accounts', 'accounts', 'accounts'], ['certificate', 'timeslot', 'studentprofile', 'teacherprofile']); alias=default
+(0.000) COMMIT; args=None; alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'accounts' AND "django_content_type"."model" IN ('learningtypetag', 'subjecttag', 'studentprofile', 'customuser', 'certificate', 'teacherprofile', 'timeslot')); args=('accounts', 'learningtypetag', 'subjecttag', 'studentprofile', 'customuser', 'certificate', 'teacherprofile', 'timeslot'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6, 7, 8, 10, 11, 12, 13) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(6, 7, 8, 10, 11, 12, 13); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.001) INSERT INTO "auth_permission" ("name", "content_type_id", "codename") SELECT * FROM UNNEST((ARRAY['Can add certificate','Can change certificate','Can delete certificate','Can view certificate','Can add time slot','Can change time slot','Can delete time slot','Can view time slot','Can add student profile','Can change student profile','Can delete student profile','Can view student profile','Can add teacher profile','Can change teacher profile','Can delete teacher profile','Can view teacher profile'])::varchar(255)[], (ARRAY[10,10,10,10,11,11,11,11,12,12,12,12,13,13,13,13])::integer[], (ARRAY['add_certificate','change_certificate','delete_certificate','view_certificate','add_timeslot','change_timeslot','delete_timeslot','view_timeslot','add_studentprofile','change_studentprofile','delete_studentprofile','view_studentprofile','add_teacherprofile','change_teacherprofile','delete_teacherprofile','view_teacherprofile'])::varchar(100)[]) RETURNING "auth_permission"."id"; args=(['Can add certificate', 'Can change certificate', 'Can delete certificate', 'Can view certificate', 'Can add time slot', 'Can change time slot', 'Can delete time slot', 'Can view time slot', 'Can add student profile', 'Can change student profile', 'Can delete student profile', 'Can view student profile', 'Can add teacher profile', 'Can change teacher profile', 'Can delete teacher profile', 'Can view teacher profile'], [10, 10, 10, 10, 11, 11, 11, 11, 12, 12, 12, 12, 13, 13, 13, 13], ['add_certificate', 'change_certificate', 'delete_certificate', 'view_certificate', 'add_timeslot', 'change_timeslot', 'delete_timeslot', 'view_timeslot', 'add_studentprofile', 'change_studentprofile', 'delete_studentprofile', 'view_studentprofile', 'add_teacherprofile', 'change_teacherprofile', 'delete_teacherprofile', 'view_teacherprofile']); alias=default
+(0.001) COMMIT; args=None; alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'accounts'; args=('accounts',); alias=default

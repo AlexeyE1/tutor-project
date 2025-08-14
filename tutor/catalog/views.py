@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from django.views.generic import ListView
-from accounts.models import MentorProfile, SubjectTag, LearningTypeTag
+from accounts.models import TeacherProfile, SubjectTag, LearningTypeTag
 
 
 
 class HomeView(ListView):
-    model = MentorProfile
+    model = TeacherProfile
     template_name = 'catalog/home.html'
 
     def get_queryset(self):

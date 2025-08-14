@@ -2,8 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 
-class CustomUser(models.Model):
-    user = models.OneToOneField(AbstractUser, on_delete=models.CASCADE)
+class CustomUser(AbstractUser):
     is_verified = models.BooleanField(default=False)
     verification_token = models.CharField(max_length=100, blank=True)
     email_confirmed = models.BooleanField(default=False)
@@ -13,9 +12,6 @@ class CustomUser(models.Model):
     avatar = models.ImageField(upload_to='avatars/', blank=True)
     bio = models.TextField(blank=True)
     
-    class Meta:
-        abstract = True
-
 
 class SubjectTag(models.Model):
     SUBJECT_CHOICES = [

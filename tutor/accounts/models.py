@@ -2,18 +2,19 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 
-class CustomUser(AbstractUser):
-    email = models.EmailField(unique=True)
-    age = models.PositiveIntegerField(null=True, blank=True)
-    role = models.CharField(
-        max_length=20,
-        choices=[('student', 'Student'), ('teacher', 'Teacher')],
-        default='student'
-    )
-    avatar = models.ImageField(upload_to='avatars/', null=True, blank=True)
-
-    def __str__(self):
-        return self.username
+class CustomUser(models.Model):
+    user = models.OneToOneField(AbstractUser, on_delete=models.CASCADE)
+    is_verified = models.BooleanField(default=False)
+    verification_token = models.CharField(max_length=100, blank=True)
+    email_confirmed = models.BooleanField(default=False)
+    
+    # Общие поля для всех пользователей
+    phone = models.CharField(max_length=15, blank=True)
+    avatar = models.ImageField(upload_to='avatars/', blank=True)
+    bio = models.TextField(blank=True)
+    
+    class Meta:
+        abstract = True
 
 
 class SubjectTag(models.Model):
@@ -42,12 +43,29 @@ class LearningTypeTag(models.Model):
         return self.name
 
 
-class MentorProfile(models.Model):
-    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='mentor_profile')
+class StudentProfile(CustomUser):
+    education_level = models.CharField(max_length=50, blank=True)
+    interests = models.TextField(blank=True)
+    learning_goals = models.TextField(blank=True)
+
+class TeacherProfile(CustomUser):
+    experience_years = models.PositiveIntegerField(default=0)
+    certificates = models.ManyToManyField('Certificate', blank=True)
+    hourly_rate = models.DecimalField(max_digits=8, decimal_places=2)
     subjects = models.ManyToManyField(SubjectTag, blank=True)
     learning_types = models.ManyToManyField(LearningTypeTag, blank=True)
-    bio = models.TextField(blank=True)
-    available_days = models.JSONField(blank=True, null=True)
+    available_times = models.ManyToManyField('TimeSlot')
+    verification_documents = models.FileField(upload_to='verification_docs/', blank=True)
 
-    def __str__(self):
-        return f"MentorProfile({self.user.username})"
+
+class Certificate(models.Model):
+    name = models.CharField(max_length=200)
+    issuer = models.CharField(max_length=200)
+    date_received = models.DateField()
+    document = models.FileField(upload_to='certificates/')
+
+
+class TimeSlot(models.Model):
+    day_of_week = models.IntegerField(choices=[(i, day) for i, day in enumerate(['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'])])
+    start_time = models.TimeField()
+    end_time = models.TimeField()

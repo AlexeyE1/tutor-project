@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+import uuid
 
 
 class CustomUser(AbstractUser):
@@ -10,7 +11,7 @@ class CustomUser(AbstractUser):
 
     role = models.CharField(max_length=10, choices=ROLE_CHOICES)
     is_verified = models.BooleanField(default=False)
-    verification_token = models.CharField(max_length=100, blank=True)
+    verification_token = models.UUIDField(default=uuid.uuid4, unique=True)
     email_confirmed = models.BooleanField(default=False)
 
     phone = models.CharField(max_length=15, blank=True)

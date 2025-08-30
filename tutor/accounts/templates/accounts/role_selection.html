@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Выберите роль | Образовательная платформа{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="row w-100">
+        <div class="col-12 text-center mb-4">
+            <h2 class="fw-bold">Кем вы хотите стать?</h2>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card role-card h-100 shadow-sm border-0 text-center" data-role="student">
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                    <i class="fas fa-user-graduate fa-3x mb-3 text-primary"></i>
+                    <h5 class="card-title">Студент</h5>
+                    <p class="card-text">Найдите своего идеального преподавателя и начните обучение</p>
+                    <form method="post">
+                    {% csrf_token %}
+                    <button type="button" class="btn btn-outline-primary choose-btn">Выбрать ученика</button>
+                    </form>
+                    <input type="radio" name="role" value="student" class="d-none">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card role-card h-100 shadow-sm border-0 text-center" data-role="teacher">
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                    <i class="fas fa-chalkboard-teacher fa-3x mb-3 text-success"></i>
+                    <h5 class="card-title">Преподаватель</h5>
+                    <p class="card-text">Делитесь знаниями и развивайтесь вместе с учениками</p>
+                    <form method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-outline-success choose-btn" name="role" value="teacher">Выбрать преподавателя</button>
+                    </form>
+                    <input type="radio" name="role" value="teacher" class="d-none">
+                </div>
+            </div>
+        </div>
+        <div class="col-12 text-center">
+            <form method="POST" id="roleForm">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-gradient px-5 py-2 fw-bold" id="continueBtn" disabled>
+                    Продолжить
+                </button>
+            </form>
+            <div class="mt-3">
+                <a href="/" class="text-decoration-none">Вернуться</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".role-card");
+    const radios = document.querySelectorAll("input[name='role']");
+    const continueBtn = document.getElementById("continueBtn");
+
+    cards.forEach(card => {
+        const button = card.querySelector(".choose-btn");
+        const radio = card.querySelector("input[type='radio']");
+        button.addEventListener("click", function () {
+            radios.forEach(r => {
+                r.checked = false;
+                r.closest(".role-card").classList.remove("selected");
+            });
+            radio.checked = true;
+            card.classList.add("selected");
+            continueBtn.disabled = false;
+        });
+    });
+});
+</script>
+
+<style>
+body {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+}
+
+.role-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.role-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.role-card.selected {
+    border: 3px solid #0d6efd;
+    box-shadow: 0 0 15px rgba(13,110,253,0.5);
+}
+
+.btn-gradient {
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border: none;
+    color: white;
+    border-radius: 30px;
+    transition: background 0.3s ease;
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(90deg, #5a67d8, #6b46c1);
+    color: white;
+}
+</style>
+{% endblock %}

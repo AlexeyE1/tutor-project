@@ -8,13 +8,13 @@ from django.shortcuts import redirect
 
 class HomeView(TemplateView):
     template_name = 'main/home.html'
-
     
-    def post(request, *args, **kwargs):
-        role = request.POST.get('role')
-        if role in ['student', 'teacher']:
-            request.session['role'] = role
-            return redirect(reverse_lazy('accounts:registration'))
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['session'] = self.request.session
+        return context
+
 
 
 # def about_view(request):

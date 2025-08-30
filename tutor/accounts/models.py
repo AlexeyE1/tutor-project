@@ -17,6 +17,11 @@ class CustomUser(AbstractUser):
     phone = models.CharField(max_length=15, blank=True)
     avatar = models.ImageField(upload_to='avatars/', blank=True)
     bio = models.TextField(blank=True)
+    email = models.EmailField(unique=True)
+
+    username = None
+    USERNAME_FIELD = "email"
+    REQUIRED_FIELDS = []
 
     def __str__(self):
         return self.username

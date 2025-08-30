@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Выбор регистрации | Образовательная платформа{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <div class="text-center mb-5">
+    <h2 class="fw-bold">Выберите тип регистрации</h2>
+    <p class="text-muted">Чтобы продолжить, выберите подходящую роль</p>
+  </div>
+
+  <div class="row justify-content-center g-4">
+    <!-- Карточка ученика -->
+    <div class="col-md-5">
+      <div class="card register-card h-100 text-center p-4">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <div>
+            <div class="icon-circle bg-primary text-white mb-3">
+              <i class="bi bi-mortarboard fs-2"></i>
+            </div>
+            <h4 class="card-title">Я ученик</h4>
+            <p class="card-text text-muted">Хочу найти репетитора, записаться на занятия и улучшить знания.</p>
+          </div>
+          <div class="mt-4">
+            <a href="{% url 'student_register' %}" class="btn btn-primary w-100">Выбрать</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Карточка репетитора -->
+    <div class="col-md-5">
+      <div class="card register-card h-100 text-center p-4">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <div>
+            <div class="icon-circle bg-success text-white mb-3">
+              <i class="bi bi-person-workspace fs-2"></i>
+            </div>
+            <h4 class="card-title">Я репетитор</h4>
+            <p class="card-text text-muted">Хочу создать профиль, найти учеников и проводить занятия.</p>
+          </div>
+          <div class="mt-4">
+            <a href="{% url 'teacher_register' %}" class="btn btn-success w-100">Выбрать</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+  .register-card {
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  .register-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+  }
+  .icon-circle {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  .btn {
+    border-radius: 50px;
+    font-weight: 600;
+    padding: 0.6rem 1.2rem;
+  }
+</style>
+{% endblock %}

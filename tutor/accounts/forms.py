@@ -22,6 +22,8 @@ class BaseRegistrationForm(UserCreationForm):
     phone = forms.IntegerField(label='Телефон', required=False)
     password1 = forms.CharField(label='Пароль', widget=forms.PasswordInput())
     password2 = forms.CharField(label='Подтверждение пароля', widget=forms.PasswordInput())
+    bio = forms.CharField(widget=forms.Textarea, required=False)
+
 
     class Meta:
         model = CustomUser
@@ -60,7 +62,6 @@ class TeacherRegistrationForm(BaseRegistrationForm):
         widget=forms.CheckboxSelectMultiple,
         required=False
     )
-    bio = forms.CharField(widget=forms.Textarea, required=False)
 
     def save(self, commit=True):
         user = super().save(commit=False)
@@ -69,10 +70,11 @@ class TeacherRegistrationForm(BaseRegistrationForm):
             user.save()
             mentor_profile = TeacherProfile.objects.create(
                 user=user,
-                bio=self.cleaned_data.get('bio', '')
             )
+            print(self.cleaned_data['subjects'])
             mentor_profile.subjects.set(self.cleaned_data['subjects'])
             mentor_profile.learning_types.set(self.cleaned_data['learning_types'])
+            mentor_profile.save()
         return user
 
 

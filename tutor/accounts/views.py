@@ -13,6 +13,19 @@ from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse
 
 
+class UserRoleSelectionView(TemplateView):
+    template_name = 'accounts/role_selection.html'
+
+    def post(self, request, *args, **kwargs):
+        role = request.POST.get('role')
+        print(role)
+        if role not in ['student', 'teacher']:
+            messages.error(request, 'Выберите корректную роль.')
+            return redirect('accounts:role_selection')
+        request.session['role'] = role
+        return redirect('accounts:registration')
+    
+
 def user_registration_view(request):
     role = request.session.get('role')
     if role not in ['student', 'teacher']:
@@ -31,7 +44,7 @@ def user_registration_view(request):
 
     template_name = 'accounts/student_registration.html' if role == 'student' else 'accounts/teacher_registration.html'
     return render(request, template_name, {'form': form})
-        
+
 
 class UserLoginView(LoginView):
     template_name = 'accounts/login.html'

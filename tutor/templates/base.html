@@ -23,13 +23,15 @@
   <link rel="stylesheet" href="/static/css/main.css">
   <style>
     :root{
-      --primary: #4e73df;
-      --primary-dark:#224abe;
-      --bg:#f8f9fc;
+      --primary:  #E6C229;
+      --primary-dark:#F3DD85;
+      --bg:#242425;
       --fg:#1b1e23;
-      --muted:#6c757d;
-      --card:#fff;
-      --border:#e3e6f0;
+      --muted:#000000;
+      --card:#242425;
+      --border:#242425;
+      --black: #1f1f1f;
+      --border-secondary:#ffcc00;
     }
     html[data-theme="dark"]{
       --bg:#1b1e23; --fg:#f8f9fc; --muted:#adb5bd; --card:#242730; --border:#2f323a;
@@ -41,28 +43,127 @@
       padding-top:72px;
     }
     .navbar{
+      color:var(--primary);
       background:var(--card);
       border-bottom:1px solid var(--border);
-      box-shadow:0 2px 8px rgba(0,0,0,.05);
+      box-shadow:0 2px 8px var(--black);
+    }
+    .navbar .nav-link{
+      color:var(--primary);
+      font-weight:500;
+      transition:color .2s;
     }
     .navbar-brand{
       font-weight:700;
       color:var(--primary)!important;
       letter-spacing:.5px;
+      font-size:2.5rem;
     }
-    .navbar .nav-link{
-      font-weight:500;
-      transition:color .2s;
+    .navbar-nav{
+      font-size:1.25rem;
     }
-    .navbar .nav-link:hover{ color:var(--primary)!important; }
+    .navbar .nav-link.active{
+      color: var(--primary) !important;
+    }
+    .navbar .nav-link:hover{ color:var(--primary-dark)!important; }
+    .navbar .nav-link:active{ color:var(--primary-dark)!important; }
 
+    .form-control{
+      font-size:1rem;
+      color:var(--black);
+      background:var(--primary);
+      border:2px solid var(--primary);
+      
+    }
+    .form-control:hover{
+      color:var(--black);
+      background:var(--primary-dark);
+    }
+
+    .form-control:focus{
+      color:var(--primary);
+      background:var(--black);
+      border:2px solid var(--black);
+    }
+
+
+    .btn{
+      color:var(--black);
+      background:var(--primary);
+      border:2px solid var(--primary);
+    }
+    .btn:hover{
+      color:var(--black);
+      background:var(--primary-dark);
+      border:2px solid var(--primary-dark);
+    }
+    .btn:focus{
+      color:var(--black);
+      background:var(--primary-dark);
+      border:2px solid var(--primary-dark);
+    }
+
+
+
+    .btn-outline-secondary{
+      color:var(--primary);
+      background:var(--black);
+      border:2px solid var(--border-secondary);
+    }
+    .btn-outline-secondary:hover{
+      color:var(--black);
+      background:var(--primary-dark);
+      border:2px solid var(--primary-dark);
+    }
+    .btn-outline-secondary:focus{
+      color:var(--black);
+      background:var(--primary-dark);
+      border:2px solid var(--primary-dark);
+    }
+    .btn-outline-secondary:active{
+      color:var(--black);
+      background:var(--primary-dark);
+      border:2px solid var(--primary-dark);
+    }
+
+
+    .hero .btn{
+      color:var(--primary);
+      background:var(--black);
+      border:2px solid var(--black);
+      width:38%;
+    }
+
+    .hero .btn:hover{
+      color:var(--black);
+      background:var(--primary-dark);
+      border:2px solid var(--primary-dark);
+    }
+
+    .hero .btn:focus{
+      color:var(--black);
+      background:var(--primary-dark);
+      border:2px solid var(--primary-dark);
+    }
+
+    .hero .btn:active{
+      color:var(--black);
+      background:var(--primary-dark);
+      border:2px solid var(--primary-dark);
+    }
+
+   
+
+
+    
     .hero{
-      min-height:75vh;
+      min-height:30vh;
       display:flex;
       align-items:center;
-      background:linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-      color:#fff;
-      border-radius:0 0 2rem 2rem;
+      justify-content: flex-start;
+      background:linear-gradient(135deg, var(--primary) 45%, var(--primary-dark) 75%);
+      color:#0c0b0b;
+      border-radius:2rem 2rem 2rem 2rem;
       padding:4rem 0;
     }
     .hero h1{ font-weight:700; font-size:2.8rem; }
@@ -70,26 +171,30 @@
     .hero .btn{ border-radius:2rem; padding:.75rem 1.5rem; }
 
     .feature-card{
-      background:var(--card);
+      background:var(--primary);
       border:1px solid var(--border);
       border-radius:1.25rem;
       transition:transform .2s, box-shadow .2s;
     }
     .feature-card:hover{
       transform:translateY(-5px);
-      box-shadow:0 6px 20px rgba(0,0,0,.1);
+      box-shadow:0 6px 20px color(var(--primary));
     }
-    .feature-card i{ color:var(--primary); }
+    .feature-card i{ color:var(--card); }
 
     footer{
-      background:var(--card);
+      background:var(--primary);
       border-top:1px solid var(--border);
       padding:3rem 0;
       margin-top:4rem;
     }
+    footer .btn-outline-secondary{
+      width: 30%;
+      border-radius:2rem 2rem 2rem 2rem;
+    }
     footer h5{ font-weight:600; }
     footer a{ color:var(--muted); text-decoration:none; }
-    footer a:hover{ color:var(--primary); }
+    footer a:hover{ color:var(--primary-dark); }
 
     #toTop{ position:fixed; right:1rem; bottom:1rem; display:none; z-index:1030; border-radius:50%; }
   </style>
@@ -114,14 +219,7 @@
           <input class="form-control form-control-sm me-2" type="search" placeholder="Поиск">
           <button class="btn btn-outline-primary btn-sm" type="submit"><i class="fa fa-search"></i></button>
         </form>
-        <a class="btn btn-primary" href="#"><i class="fa fa-user me-1"></i> Профиль </a>
-        <a class="btn btn-primary" href="{% if session.role %}
-                                        {% url "accounts:registration" %}
-                                        {% else %}
-                                        {% url "accounts:role_selection" %}
-                                        {% endif %}
-                                        "><i class="fa fa-user me-1"></i> Регестрация </a>
-        <a class="btn btn-primary" href="{% url "accounts:login" %}"><i class="fa fa-user me-1"></i> Вход </a>
+        <a class="btn btn-primary" href="{% url "accounts:login" %}"><i class="fa fa-user me-1"></i> Профиль </a>
       </div>
     </div>
   </nav>

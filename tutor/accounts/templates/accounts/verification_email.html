@@ -1,0 +1,121 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подтверждение email - TutorHub</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #E6C229;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #E6C229;
+        }
+        .email-container {
+            background: #242425;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+        .title {
+            color: #E6C229;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        .content {
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+        }
+        .button {
+            display: inline-block;
+            background-color: #E6C229;
+            color: #1f1f1f;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #F3DD85;
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #E6C229;
+            font-size: 0.9rem;
+            color: #E6C229;
+            text-align: center;
+        }
+        .warning {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+            color: #856404;
+        }
+        .link-fallback {
+            word-break: break-all;
+            background-color: #E6C229;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 0.9rem;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <div class="logo">TutorHub</div>
+            <h1 class="title">Подтвердите ваш email</h1>
+        </div>
+        
+        <div class="content">
+            <p>Здравствуйте, <strong></strong>!</p>
+            
+            <p>Спасибо за регистрацию на платформе TutorHub. Для завершения регистрации и активации вашего аккаунта, пожалуйста, подтвердите ваш email адрес.</p>
+            
+            <p>Нажмите на кнопку ниже для подтверждения:</p>
+            
+            <div style="text-align: center;">
+                <a href="{{ verification_url }}" class="button">Подтвердить email</a>
+            </div>
+            
+            <div class="warning">
+                <strong>Важно:</strong> Если вы не регистрировались на TutorHub, просто проигнорируйте это письмо.
+            </div>
+            
+            <p>Если кнопка не работает, скопируйте и вставьте следующую ссылку в ваш браузер:</p>
+            <div class="link-fallback">{{ verification_url }}</div>
+            
+            <p>Ссылка действительна в течение 24 часов.</p>
+        </div>
+        
+        <div class="footer">
+            <p>С уважением,<br>Команда TutorHub</p>
+            <p>Это автоматическое сообщение, пожалуйста, не отвечайте на него.</p>
+            <p>Если у вас есть вопросы, обратитесь в службу поддержки.</p>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock content %}

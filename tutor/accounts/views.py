@@ -11,6 +11,9 @@ from django.contrib.sites.shortcuts import get_current_site
 from django.template.loader import render_to_string
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse
+from django.contrib.auth import get_user_model
+from django.http import Http404
+import uuid
 
 
 class UserRoleSelectionView(TemplateView):
@@ -38,7 +41,8 @@ def user_registration_view(request):
         if form.is_valid():
             user = form.save()
             send_verification_email(request, user)
-            return redirect(reverse_lazy('accounts:login'))
+            messages.success(request, 'Регистрация успешна! Проверьте ваш email для подтверждения аккаунта.')
+            return redirect('accounts:email_verification')
     else:
         form = form_class()
 
@@ -85,36 +89,49 @@ class UserPasswordChangeView(LoginRequiredMixin, PasswordChangeView):
         return super().form_valid(form)
 
 
-# Добавить email отправителя
+# Отправка email для подтверждения
 def send_verification_email(request, user):
-    # This function should send a verification email to the user
-    # Implementation depends on your email backend and templates
-    
     current_site = get_current_site(request)
     verification_url = reverse('accounts:activate', kwargs={'token': str(user.verification_token)})
     full_url = f"{request.scheme}://{current_site.domain}{verification_url}"
 
     message = render_to_string('accounts/verification_email.html', {
         'user': user,
-        'verification_url': full_url
+        'verification_url': full_url,
+        'site_name': current_site.name
     })
 
     send_mail(
-        subject='Подтвердите ваш email',
+        subject='Подтвердите ваш email - TutorHub',
         message=message,
-        from_email = '#',
+        from_email='noreply@tutorhub.com',  # Замените на ваш email
         recipient_list=[user.email],
-        fail_silently=False
+        fail_silently=False,
+        html_message=message
     )
 
 
 class ActivateUserView(View):
     def get(self, request, token):
-        user = get_object_or_404(get_user_model(), verification_token=token)
-        if not user.email_confirmed:
-            user.email_confirmed = True
-            user.save()
-            messages.success(request, 'Ваш аккаунт успешно активирован!')
-        else:
-            messages.info(request, 'Ваш аккаунт уже активирован.')
-        return redirect('accounts:login')
+        try:
+            user = get_object_or_404(get_user_model(), verification_token=token)
+            if not user.email_confirmed:
+                user.email_confirmed = True
+                user.save()
+                return render(request, 'accounts/email_verification.html', {
+                    'verification_success': True
+                })
+            else:
+                return render(request, 'accounts/email_verification.html', {
+                    'verification_error': True,
+                    'error_message': 'Ваш email уже подтвержден.'
+                })
+        except Exception as e:
+            return render(request, 'accounts/email_verification.html', {
+                'verification_error': True,
+                'error_message': 'Недействительная ссылка для подтверждения.'
+            })
+
+class VerificationEmailView(View):
+    def get(self, request):
+        return render(request, 'accounts/verification_email.html')
